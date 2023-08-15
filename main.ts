@@ -1,35 +1,35 @@
 radio.onReceivedValueDeprecated(function (name, value) {
-    if (name == "Nineteen") {
+    if (name == "grass") {
         motion.turnLeft(value)
-    } else if (name == "Twenty") {
+    } else if (name == "flower") {
         motion.turnRight(value)
-    } else if (name == "Twenty One") {
+    } else if (name == "plant") {
         motion.turnRight(value)
-    } else if (name == "Twenty Two") {
+    } else if (name == "worm") {
         motion.driveStraight(value)
-    } else if (name == "Twenty Three") {
+    } else if (name == "soil") {
         motion.driveStraight(value)
-    } else if (name == "Twenty Four") {
+    } else if (name == "tree") {
         motion.stop()
     }
 })
 input.onButtonPressed(Button.A, function () {
-    radio.sendValue("Nineteen", 60)
+    radio.sendValue("grass", 60)
 })
 input.onGesture(Gesture.TiltLeft, function () {
-    radio.sendValue("Twenty Three", 40)
+    radio.sendValue("soil", 40)
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("Twenty Four", 40)
+    radio.sendValue("tree", 40)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendValue("Twenty", 40)
+    radio.sendValue("flower", 40)
 })
 input.onGesture(Gesture.Shake, function () {
-    radio.sendValue("Twenty One", 40)
+    radio.sendValue("plant", 40)
 })
 input.onGesture(Gesture.TiltRight, function () {
-    radio.sendValue("Twenty Two", 40)
+    radio.sendValue("worm", 40)
 })
 basic.showIcon(IconNames.Angry)
 radio.setGroup(1)
